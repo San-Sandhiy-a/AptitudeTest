@@ -1,0 +1,83 @@
+1. Question: How do you create a basic HTML form to insert data into a MySQL database using PHP? Create a Establishment in single page
+Ans:create table employe(id int autoincrement primarykey,name varchar(255),Email varchar(20),phonenumber varchar(11));
+Html code:
+<body>
+    <form action="" method="post">
+        <label for="">Name</label>
+        <input type="text" id="name" name="name">
+        <label for="">Email</label>
+        <input type="text" id="mail" name="mail">
+        <label for="">PhoneNumber</label>
+        <input type="text" id="number" name=number>
+          <input type="submit" value="submit">
+
+        
+    </form>
+    </body>
+
+
+
+2. Question: How do you retrieve data from a MySQL database and display it in an HTML table?
+Ans:"select id,name,Email,phonenumber from employe";
+
+3. Question: How do you update data in a MySQL database using PHP?
+
+Ans:if(isset($_POST['update'])){
+
+    $id=$_Post['$id'];
+    $name=$_Post['$name'];
+    $email=$_Post['$email'];
+    $number=$_Post['$number'];
+    
+}
+$sql="Update employe set name='$name',Email='$email',Phonenumber='$number' where id=$id";
+4. Question: How do you delete a record from a MySQL database using PHP?
+Ans:
+if(isset($_GET['delete'])){
+$deleteid=$_GET['deleteid'];
+$sql="Delete from employee where id=$deleteid";
+
+
+}
+5. Question: How do you use JavaScript to validate an HTML form before submitting to the server?
+Ans:
+
+
+
+6. Question: How do you secure a PHP form against SQL Injection?
+Ans:
+
+
+
+7. Question: How do you delete multiple records at once from a MySQL database using PHP?
+Ans:$sql=delete from employee where id in ('deleteid');
+
+8.Question: Create a 2 inputs in number using PHP and store it in Database. And calculate those values in addition without any action trigger from Frontend and store a value in a new cell. Then get the value into Frontend Page
+Ans:<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<from>
+    <form action="">
+    </form>
+    <label for="num1">Number1:</label>
+    <input type="number" name="num1" id="num1">
+    <label for="num1">Number2:</label>
+    <input type="number" name="num2" id="num2">
+    <input type="submite" value="sub">
+</from>
+<?php
+if($_Server['request']=='post')
+$num1=$post['num1'];
+$num2=$post['num2'];
+$sum=$num1+num2;
+$sql=insert into sum(num1,num2,sum)values(?,?,?);
+
+
+?>
+    </body>
+
+</html>
